@@ -1,6 +1,6 @@
 nums=["-2"]
 
-while nums[-1]!="-1":
+while nums[-1]!=-1:
     nums.append(int(input()))
 
 nums=nums[1:len(nums)-1]
