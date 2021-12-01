@@ -6,7 +6,7 @@ while nums[-1]!=-1:
 nums=nums[1:len(nums)-1]
 count=0
 curr=nums[0]+nums[1]+nums[2]
-prev=10000000000
+prev=float("inf")
 
 for i in range(2, len(nums)):
     curr=nums[i-2]+nums[i-1]+nums[i]
@@ -18,4 +18,3 @@ for i in range(2, len(nums)):
 
     
 print(count)
-    
