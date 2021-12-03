@@ -34,7 +34,7 @@ def convert(s):
 # print(convert(gamma)*convert(ep))
 
 # -------------PART 2-------------
-saved=lines[:]
+saved=lines.copy()
 k=0
 while len(lines)>1:
     oneCount=0
