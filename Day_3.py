@@ -34,6 +34,7 @@ def convert(s):
 # print(convert(gamma)*convert(ep))
 
 # -------------PART 2-------------
+saved=lines[:]
 k=0
 while len(lines)>1:
     oneCount=0
@@ -55,5 +56,30 @@ while len(lines)>1:
 
     lines=newLines
 
-print(convert(lines[0]))
+ox=lines[0]
+lines=saved
+k=0
+while len(lines)>1:
+    oneCount=0
+    for i, a in enumerate(lines):
+        if a[k]=="1":
+            oneCount+=1
+
+    newLines=[]
+    if oneCount/len(lines)>=0.5:
+        for i, a in enumerate(lines):
+            if a[k]=="0":
+                newLines.append(a)
+    else:
+        for i, a in enumerate(lines):
+            if a[k]=="1":
+                newLines.append(a)
+
+    k+=1
+
+    lines=newLines
+
+co2=lines[0]
+
+print(convert(ox)*convert(co2))
 
