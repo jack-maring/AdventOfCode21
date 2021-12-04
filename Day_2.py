@@ -1,10 +1,5 @@
 # -----------------PART 1-------------------
-# lines=["-2"]
-#
-# while lines[-1]!="-1":
-#     lines.append(input())
-#
-# lines=lines[1:len(lines)-1]
+# lines=open('Inputs/Day_2.txt', 'r').read().split('\n')
 #
 # hor=0
 # depth=0
@@ -25,12 +20,7 @@
 # print(hor*depth)
 
 #-----------------PART 2-------------------
-lines=["-2"]
-
-while lines[-1]!="-1":
-    lines.append(input())
-
-lines=lines[1:len(lines)-1]
+lines=open('Inputs/Day_2.txt', 'r').read().split('\n')
 
 hor=0
 depth=0

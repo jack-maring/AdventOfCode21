@@ -1,10 +1,4 @@
-lines=["-2"]
-
-while lines[-1]!="-1":
-    lines.append(input())
-
-lines.pop(0)
-lines.pop(-1)
+lines=open('Inputs/Day_3.txt', 'r').read().split('\n')
 
 # -------------PART 1-------------
 # ep=""

@@ -1,21 +1,14 @@
 #Part 1 and part 2 are completely different for this one so im just leaving in part 2 here
 
-lines=["-2"]
+lines=open('Inputs/Day_4.txt', 'r').read().split('\n')
 
-while lines[-1]!=["-1"]:
-    #print(lines)
-    lines.append(input().split())
-
-lines.pop(0)
-lines.pop(-1)
-
-nums=lines.pop(0)[0].split(",")
+nums=lines.pop(0).split(",")
 #print(nums)
 
 newLines=[]
 for i in range(len(lines)):
-    if lines[i]!=[]:
-        newLines.append(lines[i])
+    if lines[i]!=[] and lines[i]!="":
+        newLines.append(lines[i].split())
 
 lines=newLines
 orig=lines.copy()
@@ -61,7 +54,7 @@ def func():
         toPop=[]
 
     #print("hello")
-    return lastPoped, lastPoppedCall
+    return lastPopped, lastPoppedCall
 
 # winStart, lastCall=func()
 # count=0
@@ -86,6 +79,5 @@ for i in range(len(lines)):
             count+=int(orig[i][j])
            #print(orig[i][j])
 
-print(count, lastCall)
 print(count*int(lastCall))
 

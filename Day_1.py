@@ -1,9 +1,5 @@
-nums=["-2"]
+nums=[int(i) for i in open('Inputs/Day_1.txt', 'r').read().split('\n')]
 
-while nums[-1]!=-1:
-    nums.append(int(input()))
-
-nums=nums[1:len(nums)-1]
 count=0
 curr=nums[0]+nums[1]+nums[2]
 prev=curr
