@@ -6,18 +6,15 @@ maxY=0
 for i, a in enumerate(lines):
     newLines.append([])
     newLines[-1].append(int(a[:a.index(",")]))
-    if newLines[-1][-1]>maxX:
-        maxX=newLines[-1][-1]
     newLines[-1].append(int(a[a.index(",")+1:a.index(" ")]))
-    if newLines[-1][-1]>maxY:
-        maxY=newLines[-1][-1]
     a=a[a.index(">")+2:]
     newLines[-1].append(int(a[:a.index(",")]))
-    if newLines[-1][-1]>maxX:
-        maxX=newLines[-1][-1]
     newLines[-1].append(int(a[a.index(",")+1:]))
-    if newLines[-1][-1]>maxY:
-        maxY=newLines[-1][-1]
+
+    if max(newLines[-1][0], newLines[-1][2])>maxX:
+        maxX=max(newLines[-1][0], newLines[-1][2])
+    if max(newLines[-1][1], newLines[-1][3])>maxY:
+        maxY=max(newLines[-1][1], newLines[-1][3])
 
 lines=newLines
 grid=[[0 for j in range(maxX+1)] for i in range(maxY+1)]
