@@ -11,7 +11,7 @@ def makeData():
 #Main solve
 def solve(data):
 
-    for i in range(80): #change to range(80) for part 1
+    for i in range(256): #change to range(80) for part 1
         temp=data[1]
         for j in range(2,9):
             data[j-1]=data[j]
