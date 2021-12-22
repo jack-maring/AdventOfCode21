@@ -1,0 +1,1 @@
+lines=open("Inputs/Day_22.txt", "r").read().split("\n")
